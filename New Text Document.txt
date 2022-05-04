@@ -1,0 +1,34 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "mySubnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Fn::ImportValue": "outputstack-VPCID"
+        },
+        "CidrBlock": "10.11.0.0/24",
+        "AvailabilityZone": "us-east-2a",
+        "Tags": [
+          {
+            "Key": "stack",
+            "Value": "production"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "mySubnet": {
+      "Description": "The ID of the VPC",
+      "Value": {
+        "Ref": "mySubnet"
+      },
+      "Export": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-outputstack-VPCID"
+        }
+      }
+    }
+  }
+}
