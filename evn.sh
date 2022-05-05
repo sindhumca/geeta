@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cidr=10.0.0.0/32
+cidr=10.25.0.0/19
 region=us-east-2
