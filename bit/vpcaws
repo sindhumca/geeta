@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pwd=`pwd`
-source $pwd/evn.sh
+source $pwd/ehm
 
 
 /usr/local/bin/aws ec2 create-vpc --cidr-block $cidr --region $region
