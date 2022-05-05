@@ -1,4 +1,4 @@
-$ cat vpcaws
+
 #!/bin/bash
 
 pwd=`pwd`
