@@ -5,7 +5,7 @@ COPY . .
 RUN mkdir docker-test
 RUN cd docker-test
 RUN ls
-RUN cp ./opt/docker-test
+RUN cp -r g* /opt/docker-test
 RUN ls
 WORKDIR /opt/docker-test
 CMD "/bin/bash"
